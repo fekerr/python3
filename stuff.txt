@@ -1,0 +1,52 @@
+# (readme...) no shbang
+
+# 20191227 fekerr@gmail.com
+
+https://dev.to/mortoray/how-to-install-python-3-8-on-ubuntu-1bp4
+
+sudo apt-get install python3.8-venv
+python3.8 -m venv venvpy38 
+. venvpy38/bin/activate
+.........
+https://requests.readthedocs.io/en/master/user/install/
+
+git clone git://github.com/psf/requests.git
+............
+cd requests
+pip install .
+....
+https://websauna.org/docs/tutorials/deployment/freeze.html
+
+pip freeze --local | grep -v myapp > requirements.txt
+.....
+
+#!/usr/bin/env python3
+# woof.py
+# updated 20191227 fekerr@gmail.com
+
+# import collections
+from pprint import pprint
+# from functools import reduce
+
+pprint(tuple(x for x in range(3)))
+
+
+# makefile for python3 src experiments
+# 20191227 fekerr@gmail.com
+
+pysrc=woof.py
+allsrc=${pysrc} makefile pyflakes pep8
+
+all: ${allsrc}
+
+pep8: ${allsrc}
+		pep8 ${pysrc}
+
+pyflakes: ${allsrc}
+	pyflakes ${pysrc}
+
+requirements.txt: ${allsrc}
+	pip freeze --local | grep -v myapp > requirements.txt
+
+run:
+	./woof.py
