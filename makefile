@@ -6,11 +6,15 @@ allsrc=${pysrc} makefile requirements.txt
 
 all: ${allsrc}
 	pyflakes ${pysrc}
-	pep8 ${pysrc}
+	pycodestyle ${pysrc}
 	./woof.py
 
+# dying breed
 pep8: ${allsrc}
 	pep8 ${pysrc}
+
+pycodestyle: ${allsrc}
+	pycodestyle ${pysrc}
 
 pyflakes: ${allsrc}
 	pyflakes ${pysrc}
