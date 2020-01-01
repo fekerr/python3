@@ -20,4 +20,5 @@ https://websauna.org/docs/tutorials/deployment/freeze.html
 pip freeze --local | grep -v myapp > requirements.txt
 .....
 https://gist.github.com/developius/c81f021eb5c5916013dc
+git remote -v
 git remote set-url origin git@github.com:username/your-repository.git
