@@ -22,3 +22,8 @@ pip freeze --local | grep -v myapp > requirements.txt
 https://gist.github.com/developius/c81f021eb5c5916013dc
 git remote -v
 git remote set-url origin git@github.com:username/your-repository.git
+
+https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
+
+ssh -vvvT git@github.com
+# Attempts to ssh to GitHub
