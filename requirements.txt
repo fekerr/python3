@@ -8,6 +8,6 @@ requests==2.22.0
 Requires==0.0.3
 screepsapi==0.5.1
 six==1.13.0
-urllib3==1.25.7
+urllib3==1.26.5
 virtualenv==16.7.9
 websocket-client==0.57.0
