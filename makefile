@@ -1,26 +1,33 @@
 # makefile for python3 src experiments
-# 20191227 fekerr@gmail.com
+# 20221214 fekerr@gmail.com (github....)
 
 pysrc=woof.py
 allsrc=${pysrc} makefile requirements.txt
 
 all: ${allsrc}
-	pyflakes ${pysrc}
-	pycodestyle ${pysrc}
+	echo "venv: source doit.sh"
+	flake8 ${pysrc}
+	mypy ${pysrc}
+	pyright ${pysrc}
 	./woof.py
 
-# dying breed
-pep8: ${allsrc}
-	pep8 ${pysrc}
+venv:
+	python3 -m venv venv3
 
-pycodestyle: ${allsrc}
-	pycodestyle ${pysrc}
+pip:
+	python3 -m pip install -r requirements.txt
 
-pyflakes: ${allsrc}
-	pyflakes ${pysrc}
+flake8: ${allsrc}
+	flake8 ${pysrc}
 
-requirements.txt: ${pysrc} makefile
-	pip freeze --local | grep -v myapp > requirements.txt
+mypy: ${allsrc}
+	mypy ${pysrc}
+
+pyright: ${allsrc}
+	pyright ${pysrc}
+
+current_reqs.txt: ${pysrc} makefile
+	pip freeze --local | grep -v myapp > current_reqs.txt
 
 run:
 	./woof.py

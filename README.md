@@ -1,6 +1,7 @@
 # python3
 misc python3 work and notes
 
-20191228 fekerr@gmail.com
+20221214 fekerr@gmail.com
 
-These are just some notes stashed along with a makefile to remind about pep8 (pycodestyle) and pflakes, pip freeze, requirements.txt.
+These are notes stashed with a makefile with some python3 convenience features.
+Current dev env: win11 vscode wsl

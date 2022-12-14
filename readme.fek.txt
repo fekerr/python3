@@ -1,3 +1,7 @@
+# 20221214 fekerr@gmail.txt
+
+Misc & many updates for December 2022
+
 # no shbang you silly text file
 
 # 20191228 fekerr@gmail.com
