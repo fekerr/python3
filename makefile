@@ -1,4 +1,5 @@
 # makefile for python3 src experiments
+# 20221218 fekerr TODO should this be named 'Makefile'
 # 20221214 fekerr@gmail.com (github....)
 
 pysrc=woof.py
