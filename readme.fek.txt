@@ -1,3 +1,6 @@
+# 20231124 fekerr@gmail.txt - playing with github codespace
+
+
 # 20221214 fekerr@gmail.txt
 
 Misc & many updates for December 2022
